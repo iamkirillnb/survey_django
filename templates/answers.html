@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href='{% static "style.css" %}'/>
+    <title>Title</title>
+</head>
+<body>
+<h3>{{ current_survey }}</h3>
+
+Question Form
+{% csrf_token %} {{ question_form }} <input type="submit" value="Send Question" />
+
+Answer Form
+{% csrf_token %} {{ answer_form }} <input type="submit" value="Send Answer" />
+</body>
+</html>

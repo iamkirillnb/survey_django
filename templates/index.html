@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href='{% static "style.css" %}'/>
+    <title>Title</title>
+</head>
+<body>
+<h3>Опросы:</h3>
+<ul>
+    {% for i in surveys %}
+        <li><a href="{{ i.pk }}">{{ i.title }}</a></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

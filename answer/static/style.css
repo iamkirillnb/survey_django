@@ -1,0 +1,13 @@
+
+a {
+    text-decoration: none;
+    : 5px;
+    color: black;
+}
+a:hover{
+    color: grey;
+}
+
+ul li {
+    margin: 10px;
+}

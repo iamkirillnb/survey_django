@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href='{% static "style.css" %}'/>
+    <title>Title</title>
+</head>
+<body>
+<h3><a href="http://127.0.0.1:8000/">Главная</a> </h3>
+<h3>{{ current_survey }}</h3>
+<ul>
+    {% for i in questions %}
+        <li><p>{{ i }}</p></li>
+         <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="send">
+        </form>
+    {% endfor %}
+
+</ul>
+
+</body>
+</html>
